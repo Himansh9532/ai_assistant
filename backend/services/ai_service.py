@@ -172,8 +172,19 @@ def generate_questions(stream):
     for topic in topics:
         pool.extend(question_bank.get(topic, []))
 
-    total_questions = min(100, len(pool))
-    sampled_questions = random.sample(pool, total_questions)
+    if not pool:
+        return []
+
+    desired_total = 50
+    total_questions = min(100, max(desired_total, len(pool)))
+
+    if len(pool) >= total_questions:
+        sampled_questions = random.sample(pool, total_questions)
+    else:
+        sampled_questions = []
+        while len(sampled_questions) < total_questions:
+            remaining = total_questions - len(sampled_questions)
+            sampled_questions.extend(random.sample(pool, min(len(pool), remaining)))
 
     questions = []
     for idx, template in enumerate(sampled_questions, start=1):
