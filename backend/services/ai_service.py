@@ -175,16 +175,17 @@ def generate_questions(stream):
     if not pool:
         return []
 
-    desired_total = 50
-    total_questions = min(100, max(desired_total, len(pool)))
+    # Number of questions to return. Do not create duplicates if pool is smaller
+    # than desired — instead return all available unique questions.
+    desired_total = 40
+    total_questions = min(desired_total, len(pool))
 
+    # If we have enough unique questions, sample without replacement.
     if len(pool) >= total_questions:
         sampled_questions = random.sample(pool, total_questions)
     else:
-        sampled_questions = []
-        while len(sampled_questions) < total_questions:
-            remaining = total_questions - len(sampled_questions)
-            sampled_questions.extend(random.sample(pool, min(len(pool), remaining)))
+        # Fallback: return the entire pool (unique questions only).
+        sampled_questions = list(pool)
 
     questions = []
     for idx, template in enumerate(sampled_questions, start=1):
