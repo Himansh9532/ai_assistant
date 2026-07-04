@@ -1,9 +1,6 @@
-# Placeholder for backend/models/candidate.py
-from sqlalchemy import Column
-from sqlalchemy import Integer
-from sqlalchemy import String
-from sqlalchemy import DateTime
 from datetime import datetime
+
+from sqlalchemy import Column, DateTime, Integer, String
 
 from database.database import Base
 
@@ -17,9 +14,11 @@ class Candidate(Base):
     email = Column(String, unique=True, nullable=False)
     phone = Column(String, nullable=False)
 
-    college_company = Column(String)
-    stream = Column(String)
-    experience = Column(String)
+    college_company = Column(String, nullable=True, default="")
+    stream = Column(String, nullable=True, default="")
+    experience = Column(String, nullable=True, default="")
+    password_hash = Column(String, nullable=True)
+    is_verified = Column(Integer, default=0)
 
     created_at = Column(
         DateTime,

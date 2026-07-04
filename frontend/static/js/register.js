@@ -38,7 +38,7 @@ document.getElementById("registerForm")
             result.candidate_id
         );
 
-        window.location.href = "/exam";
+        window.location.href = "/login";
 
     }
     catch(error){

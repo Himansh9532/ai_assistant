@@ -4,82 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Interview Prep — Practice. Ship better answers. Get hired.</title>
 
+    <title>AI Interview Prep — Practice. Ship Better Answers. Get Hired.</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/home.css">
 </head>
 
 <body>
 
+    <!-- Your content starts here -->
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-
+ 
         <a class="navbar-brand" href="/">
             <span class="brand-mark">&gt;_</span>
             AI Interview Prep
         </a>
-
+ 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+ 
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto align-items-lg-center">
-
+ 
                 <li class="nav-item"><a class="nav-link" href="#features">Product</a></li>
                 <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
                 <li class="nav-item"><a class="nav-link" href="#topics">Topics</a></li>
                 <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
+ 
                 <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                    <a href="/login" class="btn btn-solid">Start free</a>
+                    <a href="/assessment" class="btn btn-solid">Start free</a>
                 </li>
-
+ 
             </ul>
         </div>
-
+ 
     </div>
 </nav>
-
-
+ 
+ 
 <!-- HERO -->
 <section class="hero-section">
     <div class="hero-grid-bg"></div>
-
+ 
     <div class="container">
         <div class="row align-items-center g-5">
-
+ 
             <div class="col-lg-6">
                 <span class="eyebrow">// interview_prep.run()</span>
-
+ 
                 <h1 class="hero-title">
                     Rehearse the interview<br>
                     before it <span>rehearses you</span>.
                 </h1>
-
+ 
                 <p class="hero-text">
                     Practice real DSA, system design and CS-fundamentals questions
                     against an AI interviewer that pushes back, times you, and tells you
                     exactly where the answer broke down.
                 </p>
-
+ 
                 <div class="hero-actions">
-                    <a href="/login" class="btn btn-solid btn-lg">Start a mock interview</a>
+                    <a href="/practice" class="btn btn-solid btn-lg">Start a mock interview</a>
                     <a href="#how" class="btn btn-outline-line btn-lg">See how it works</a>
                 </div>
-
+ 
                 <div class="hero-meta">
-                    <span><i class="fa-solid fa-check"></i> No credit card needed</span>
-                    <span><i class="fa-solid fa-check"></i> 3 free sessions to start</span>
+                    <span><i class="fa-solid fa-check"></i> No credit card</span>
+                    <span><i class="fa-solid fa-check"></i> 3 free sessions</span>
                 </div>
             </div>
-
+ 
             <div class="col-lg-6">
                 <div class="terminal-card">
                     <div class="terminal-bar">
@@ -88,13 +97,13 @@
                         <span class="dot green"></span>
                         <span class="terminal-title">mock_interview.session</span>
                     </div>
-
+ 
                     <div class="terminal-body">
                         <p class="line ai">
                             <span class="tag">AI</span>
                             Find the length of the longest substring without repeating characters.
                         </p>
-
+ 
                         <pre class="code-block"><code><span class="kw">def</span> <span class="fn">longest_unique</span>(s):
     seen = {}
     start = result = <span class="num">0</span>
@@ -104,7 +113,7 @@
         seen[ch] = i
         result = max(result, i - start + <span class="num">1</span>)
     <span class="kw">return</span> result</code></pre>
-
+ 
                         <p class="line verdict">
                             <span class="badge-ok"><i class="fa-solid fa-check"></i> O(n) time · O(1) space</span>
                             <span class="verdict-note">Clean sliding window. Try the follow-up →</span>
@@ -112,12 +121,12 @@
                     </div>
                 </div>
             </div>
-
+ 
         </div>
     </div>
 </section>
-
-
+ 
+ 
 <!-- TRUSTED BY -->
 <section class="logos-section">
     <div class="container">
@@ -132,157 +141,157 @@
         </div>
     </div>
 </section>
-
-
+ 
+ 
 <!-- STATS -->
 <section class="stats-section">
     <div class="container">
         <div class="row text-center g-4">
-
+ 
             <div class="col-6 col-md-3">
-                <div class="stat-card reveal">
+                <div class="stat-card">
                     <h2>10,000+</h2>
                     <p>Active candidates</p>
                 </div>
             </div>
-
+ 
             <div class="col-6 col-md-3">
-                <div class="stat-card reveal">
+                <div class="stat-card">
                     <h2>2,500+</h2>
                     <p>Mock interviews run</p>
                 </div>
             </div>
-
+ 
             <div class="col-6 col-md-3">
-                <div class="stat-card reveal">
+                <div class="stat-card">
                     <h2>500+</h2>
                     <p>Companies covered</p>
                 </div>
             </div>
-
+ 
             <div class="col-6 col-md-3">
-                <div class="stat-card reveal">
+                <div class="stat-card">
                     <h2>85%</h2>
-                    <p>Land an offer within 60 days of starting</p>
+                    <p>Land an offer within 60 days</p>
                 </div>
             </div>
-
+ 
         </div>
     </div>
 </section>
-
-
+ 
+ 
 <!-- FEATURES -->
 <section id="features" class="section-padding">
     <div class="container">
-
-        <div class="section-head reveal">
+ 
+        <div class="section-head">
             <span class="eyebrow eyebrow-dark">// what_you_get</span>
             <h2>Everything between "I should practice" and "I'm ready"</h2>
             <p>Built for technical interview prep, not generic quizzing.</p>
         </div>
-
+ 
         <div class="row g-4">
-
+ 
             <div class="col-lg-6">
-                <div class="feature-card feature-large reveal">
+                <div class="feature-card feature-large">
                     <i class="fa-solid fa-robot"></i>
                     <h4>AI mock interviews</h4>
                     <p>Talk through your approach out loud, get interrupted with follow-up
                         questions, and hear exactly what a real interviewer would push on.</p>
                 </div>
             </div>
-
+ 
             <div class="col-lg-6">
-                <div class="feature-card feature-large reveal">
+                <div class="feature-card feature-large">
                     <i class="fa-solid fa-chart-line"></i>
                     <h4>Weakness tracking</h4>
                     <p>Every session updates a topic-by-topic map so you always know
                         whether to drill graphs, DP, or your explanation clarity next.</p>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <i class="fa-solid fa-book"></i>
                     <h4>Question bank</h4>
                     <p>1,200+ curated questions tagged by company and difficulty.</p>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <i class="fa-solid fa-diagram-project"></i>
                     <h4>System design rounds</h4>
                     <p>Whiteboard-style prompts with rubric-based scoring.</p>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <i class="fa-solid fa-stopwatch"></i>
                     <h4>Timed drills</h4>
                     <p>Practice under the same clock pressure as the real round.</p>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
     </div>
 </section>
-
-
+ 
+ 
 <!-- HOW IT WORKS -->
 <section id="how" class="how-section">
     <div class="container">
-
-        <div class="section-head section-head-light reveal">
+ 
+        <div class="section-head section-head-light">
             <span class="eyebrow">// how_it_works</span>
             <h2>Three steps, repeated until it sticks</h2>
         </div>
-
+ 
         <div class="row g-4">
-
+ 
             <div class="col-md-4">
-                <div class="step-card reveal">
+                <div class="step-card">
                     <span class="step-num">01</span>
                     <h4>Pick a track</h4>
                     <p>Choose DSA, system design, DBMS, OS, CN or OOP — or a target
                         company's known interview pattern.</p>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="step-card reveal">
+                <div class="step-card">
                     <span class="step-num">02</span>
                     <h4>Run the interview</h4>
                     <p>The AI asks, listens, and follows up the way a real panel does,
                         instead of just judging your final answer.</p>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="step-card reveal">
+                <div class="step-card">
                     <span class="step-num">03</span>
                     <h4>Fix what broke</h4>
                     <p>Get a breakdown of where the reasoning slipped, then a follow-up
                         drill on that exact gap.</p>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
     </div>
 </section>
-
-
+ 
+ 
 <!-- TOPICS -->
 <section id="topics" class="topics-section">
     <div class="container text-center">
-
+ 
         <span class="eyebrow eyebrow-dark">// topics.list()</span>
         <h2 class="mb-5">Popular interview topics</h2>
-
+ 
         <div class="d-flex flex-wrap justify-content-center gap-3">
             <button class="topic-pill">Data Structures &amp; Algorithms</button>
             <button class="topic-pill">System Design</button>
@@ -291,24 +300,24 @@
             <button class="topic-pill">Computer Networks</button>
             <button class="topic-pill">OOP</button>
         </div>
-
+ 
     </div>
 </section>
-
-
+ 
+ 
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
     <div class="container">
-
-        <div class="section-head reveal">
+ 
+        <div class="section-head">
             <span class="eyebrow eyebrow-dark">// candidates.say()</span>
             <h2>It feels closer to the real thing</h2>
         </div>
-
+ 
         <div class="row g-4">
-
+ 
             <div class="col-md-4">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card">
                     <p>"The follow-up questions caught the exact gap in my DP explanation
                         that my last two real interviews also caught. Wish I'd found this sooner."</p>
                     <div class="testimonial-person">
@@ -320,9 +329,9 @@
                     </div>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card">
                     <p>"System design rounds finally stopped feeling like guesswork.
                         The rubric feedback told me what to actually study next."</p>
                     <div class="testimonial-person">
@@ -334,9 +343,9 @@
                     </div>
                 </div>
             </div>
-
+ 
             <div class="col-md-4">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card">
                     <p>"Practicing out loud against something that talks back made the
                         real interview feel like round two, not round one."</p>
                     <div class="testimonial-person">
@@ -348,26 +357,26 @@
                     </div>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
     </div>
 </section>
-
-
+ 
+ 
 <!-- PRICING -->
 <section id="pricing" class="pricing-section">
     <div class="container">
-
-        <div class="section-head reveal">
+ 
+        <div class="section-head">
             <span class="eyebrow eyebrow-dark">// pricing.plans()</span>
             <h2>Start free, upgrade when you're serious</h2>
         </div>
-
+ 
         <div class="row g-4 justify-content-center">
-
+ 
             <div class="col-lg-4 col-md-6">
-                <div class="price-card reveal">
+                <div class="price-card">
                     <h5>Starter</h5>
                     <div class="price">₹0<span>/mo</span></div>
                     <p>Get a feel for how the mock interviews work.</p>
@@ -376,12 +385,12 @@
                         <li><i class="fa-solid fa-check"></i> Core question bank</li>
                         <li><i class="fa-solid fa-check"></i> Basic progress tracking</li>
                     </ul>
-                    <a href="/login" class="btn btn-outline-line w-100">Start free</a>
+                    <a href="/assessment" class="btn btn-outline-line w-100">Start free</a>
                 </div>
             </div>
-
+ 
             <div class="col-lg-4 col-md-6">
-                <div class="price-card price-card-featured reveal">
+                <div class="price-card price-card-featured">
                     <span class="price-tag">Most popular</span>
                     <h5>Pro</h5>
                     <div class="price">₹799<span>/mo</span></div>
@@ -392,12 +401,12 @@
                         <li><i class="fa-solid fa-check"></i> Company-specific tracks</li>
                         <li><i class="fa-solid fa-check"></i> Full weakness analytics</li>
                     </ul>
-                    <a href="/login" class="btn btn-solid w-100">Get Pro</a>
+                    <a href="/assessment" class="btn btn-solid w-100">Get Pro</a>
                 </div>
             </div>
-
+ 
             <div class="col-lg-4 col-md-6">
-                <div class="price-card reveal">
+                <div class="price-card">
                     <h5>Teams</h5>
                     <div class="price">Custom</div>
                     <p>For bootcamps and placement cells.</p>
@@ -409,35 +418,35 @@
                     <a href="#contact" class="btn btn-outline-line w-100">Talk to us</a>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
     </div>
 </section>
-
-
+ 
+ 
 <!-- CTA -->
 <section class="cta-section text-center">
     <div class="container">
         <span class="eyebrow">// ready_check()</span>
         <h2>Ready for your next interview?</h2>
-        <p>Your first mock interview takes about five minutes to start.</p>
-        <a href="/login" class="btn btn-light btn-lg mt-3 px-5">Start Now</a>
+        <p>Run your first mock interview in the next five minutes.</p>
+        <a href="/practice" class="btn btn-light btn-lg mt-3 px-5">Start Now</a>
     </div>
 </section>
-
-
+ 
+ 
 <!-- FOOTER -->
 <footer id="contact" class="footer">
     <div class="container">
-
+ 
         <div class="row g-4">
-
+ 
             <div class="col-md-4">
                 <h4><span class="brand-mark">&gt;_</span> AI Interview Prep</h4>
                 <p>Helping candidates prepare smarter and get hired faster.</p>
             </div>
-
+ 
             <div class="col-md-4">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
@@ -448,7 +457,7 @@
                     <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
-
+ 
             <div class="col-md-4">
                 <h5>Contact</h5>
                 <p>info@example.com</p>
@@ -458,39 +467,34 @@
                     <i class="fab fa-twitter"></i>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
         <hr>
-
+ 
         <div class="text-center footer-bottom">
             © 2026 AI Interview Prep. All Rights Reserved.
         </div>
-
+ 
     </div>
 </footer>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    // Reveal-on-scroll for section content
-    const revealEls = document.querySelectorAll('.reveal');
-
-    if ('IntersectionObserver' in window && revealEls.length) {
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('is-visible'), i % 3 * 60);
-                    io.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-        revealEls.forEach(el => io.observe(el));
-    } else {
-        revealEls.forEach(el => el.classList.add('is-visible'));
-    }
-</script>
-
+ 
 </body>
 </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

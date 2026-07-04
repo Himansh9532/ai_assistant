@@ -528,84 +528,6 @@ a{
 }
 
 /* =====================================================
-   ABOUT / BENEFITS
-===================================================== */
-.about-section{
-    padding:100px 0;
-    background:var(--paper-2);
-}
-
-.about-lead{
-    font-size:17px;
-    color:var(--text-mute);
-    margin:18px 0 26px;
-    line-height:1.7;
-    max-width:480px;
-}
-
-.benefits-list{
-    list-style:none;
-    margin-bottom:32px;
-}
-.benefits-list li{
-    font-size:15px;
-    margin-bottom:14px;
-    color:var(--text-dark);
-}
-.benefits-list li i{
-    color:var(--green);
-    margin-right:12px;
-    width:16px;
-}
-
-.about-card{
-    background:var(--paper);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:32px;
-}
-
-.about-card-row{
-    display:grid;
-    grid-template-columns:90px 1fr 46px;
-    align-items:center;
-    gap:14px;
-    margin-bottom:18px;
-}
-
-.about-card-row span{
-    font-family:var(--font-mono);
-    font-size:13px;
-    color:var(--text-mute);
-}
-
-.about-card-row strong{
-    font-size:13px;
-    text-align:right;
-    color:var(--text-dark);
-}
-
-.about-card .bar{
-    height:8px;
-    background:var(--border);
-    border-radius:6px;
-    overflow:hidden;
-}
-
-.about-card .fill{
-    height:100%;
-    background:linear-gradient(90deg, var(--blue), var(--violet));
-    border-radius:6px;
-}
-
-.about-card-note{
-    font-size:13px;
-    color:var(--text-mute);
-    margin-top:8px;
-    text-align:center;
-}
-
-/* =====================================================
    TESTIMONIALS
 ===================================================== */
 .testimonials-section{
@@ -848,15 +770,4 @@ a{
     .cta-section h2{font-size:32px;}
     .navbar-brand{font-size:19px;}
     .logos-row{gap:28px;}
-    .about-card-row{grid-template-columns:70px 1fr 40px;}
-}
-
-.footer-bottom-row{
-    align-items:center;
-}
-.footer-bottom-row a{
-    color:#7C8AA5;
-}
-.footer-bottom-row a:hover{
-    color:#fff;
 }

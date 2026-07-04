@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel, EmailStr
 
 
@@ -8,6 +10,7 @@ class CandidateCreate(BaseModel):
     college_company: str
     stream: str
     experience: str
+    password: Optional[str] = None
 
 
 class CandidateResponse(CandidateCreate):

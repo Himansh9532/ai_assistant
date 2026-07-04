@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Analyst Assessment — Prove your SQL, Python &amp; BI skills</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark">SELECT</span>
+            AI Data Analyst
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item"><a class="nav-link" href="#features">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#domains">Domains</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a href="/login" class="btn btn-solid">Sign in</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="hero-grid-bg"></div>
+
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <span class="eyebrow">// run_assessment.sql</span>
+
+                <h1 class="hero-title">
+                    Prove your data skills,<br>
+                    don't just <span>list them</span>.
+                </h1>
+
+                <p class="hero-text">
+                    Take AI-graded assessments in SQL, Python, Excel, Power BI and statistics,
+                    and walk away with a score breakdown that says exactly where you're strong
+                    and what to fix next.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/login" class="btn btn-solid btn-lg">Start an assessment</a>
+                    <a href="#how" class="btn btn-outline-line btn-lg">See how it works</a>
+                </div>
+
+                <div class="hero-meta">
+                    <span><i class="fa-solid fa-check"></i> Free starter assessment</span>
+                    <span><i class="fa-solid fa-check"></i> Shareable certificate</span>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="terminal-card">
+                    <div class="terminal-bar">
+                        <span class="dot red"></span>
+                        <span class="dot amber"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">assessment.sql_round</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <p class="line ai">
+                            <span class="tag">Q3</span>
+                            Find each customer's most recent order date, including customers with no orders.
+                        </p>
+
+                        <pre class="code-block"><code><span class="kw">SELECT</span> c.customer_id,
+       <span class="fn">MAX</span>(o.order_date) <span class="kw">AS</span> last_order
+<span class="kw">FROM</span> customers c
+<span class="kw">LEFT JOIN</span> orders o
+       <span class="kw">ON</span> o.customer_id = c.customer_id
+<span class="kw">GROUP BY</span> c.customer_id;</code></pre>
+
+                        <p class="line verdict">
+                            <span class="badge-ok"><i class="fa-solid fa-check"></i> 18/20 · correct LEFT JOIN logic</span>
+                            <span class="verdict-note">Missed: NULL handling for zero-order customers →</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- TRUSTED BY -->
+<section class="logos-section">
+    <div class="container">
+        <p class="logos-label">Assessment results trusted by hiring teams at</p>
+        <div class="logos-row">
+            <span>Deloitte</span>
+            <span>Tredence</span>
+            <span>Mu Sigma</span>
+            <span>Fractal</span>
+            <span>Capgemini</span>
+            <span>TCS</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- STATS -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <h2>25,000+</h2>
+                    <p>Assessments completed</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <h2>6</h2>
+                    <p>Skill domains covered</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <h2>4,800+</h2>
+                    <p>Certificates issued</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <h2>92%</h2>
+                    <p>Say it found a real skill gap</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section id="features" class="section-padding">
+    <div class="container">
+
+        <div class="section-head">
+            <span class="eyebrow eyebrow-dark">// why_this_platform</span>
+            <h2>Assessments that grade reasoning, not just output</h2>
+            <p>Built for people who need a real, defensible measure of their analytics skill.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="feature-card feature-large">
+                    <i class="fa-solid fa-cogs"></i>
+                    <h4>AI-powered evaluation</h4>
+                    <p>Every query, script and formula is graded in real time — including partial
+                        credit for the right approach with a small execution mistake.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card feature-large">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4>Detailed performance analytics</h4>
+                    <p>A breakdown by domain and sub-skill after every attempt, so you know
+                        whether to revisit joins, window functions, or pivot logic next.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-lock"></i>
+                    <h4>Secure &amp; proctorable</h4>
+                    <p>Enterprise-grade integrity checks protect every assessment result.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-mobile-alt"></i>
+                    <h4>Take it anywhere</h4>
+                    <p>Full assessment experience on desktop, tablet, or phone.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>24/7 support</h4>
+                    <p>A support team on hand for anything that comes up mid-assessment.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how-section">
+    <div class="container">
+
+        <div class="section-head section-head-light">
+            <span class="eyebrow">// how_it_works</span>
+            <h2>Three steps to a verified skill score</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <span class="step-num">01</span>
+                    <h4>Choose a domain</h4>
+                    <p>SQL, Python, Excel, Power BI, statistics, or a full business
+                        analytics track.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <span class="step-num">02</span>
+                    <h4>Take the assessment</h4>
+                    <p>Work through real, scenario-based problems the way you would on
+                        the job — not multiple choice trivia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <span class="step-num">03</span>
+                    <h4>Get your breakdown</h4>
+                    <p>Instant scoring, a sub-skill breakdown, and a shareable
+                        certificate once you pass.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- DOMAINS -->
+<section id="domains" class="topics-section">
+    <div class="container text-center">
+
+        <span class="eyebrow eyebrow-dark">// domains.list()</span>
+        <h2 class="mb-5">Assessment domains</h2>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="topic-pill"><i class="fa-solid fa-database me-2"></i>SQL</button>
+            <button class="topic-pill"><i class="fa-brands fa-python me-2"></i>Python</button>
+            <button class="topic-pill"><i class="fa-solid fa-file-excel me-2"></i>Excel</button>
+            <button class="topic-pill"><i class="fa-solid fa-chart-column me-2"></i>Power BI</button>
+            <button class="topic-pill"><i class="fa-solid fa-square-root-variable me-2"></i>Statistics</button>
+            <button class="topic-pill"><i class="fa-solid fa-briefcase me-2"></i>Business Analytics</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT / BENEFITS -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <span class="eyebrow eyebrow-dark">// ready_check()</span>
+                <h2>Ready to assess your skills?</h2>
+                <p class="about-lead">
+                    Join thousands of analysts and job seekers who've turned a resume claim
+                    into a verified, shareable score.
+                </p>
+
+                <ul class="benefits-list">
+                    <li><i class="fa-solid fa-check"></i> Instant feedback on every attempt</li>
+                    <li><i class="fa-solid fa-check"></i> A clear map of strengths and gaps</li>
+                    <li><i class="fa-solid fa-check"></i> Certificates that are verifiable, not just a PDF</li>
+                    <li><i class="fa-solid fa-check"></i> A portfolio you can put in front of hiring managers</li>
+                </ul>
+
+                <a href="/login" class="btn btn-solid btn-lg">Start your assessment now</a>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-card">
+                    <div class="about-card-row">
+                        <span>SQL</span>
+                        <div class="bar"><div class="fill" style="width:88%"></div></div>
+                        <strong>88%</strong>
+                    </div>
+                    <div class="about-card-row">
+                        <span>Python</span>
+                        <div class="bar"><div class="fill" style="width:74%"></div></div>
+                        <strong>74%</strong>
+                    </div>
+                    <div class="about-card-row">
+                        <span>Power BI</span>
+                        <div class="bar"><div class="fill" style="width:63%"></div></div>
+                        <strong>63%</strong>
+                    </div>
+                    <div class="about-card-row">
+                        <span>Statistics</span>
+                        <div class="bar"><div class="fill" style="width:81%"></div></div>
+                        <strong>81%</strong>
+                    </div>
+                    <p class="about-card-note">Your skill map, updated after every assessment.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+    <div class="container">
+
+        <div class="section-head">
+            <span class="eyebrow eyebrow-dark">// candidates.say()</span>
+            <h2>A score they can actually trust</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"The Power BI section caught that I was solid on DAX but weak on data
+                        modelling. That's exactly what my next project needed."</p>
+                    <div class="testimonial-person">
+                        <span class="avatar">NS</span>
+                        <div>
+                            <strong>Neha S.</strong>
+                            <small>Business analyst</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"Recruiters stopped asking me to 'walk through my SQL skills' once
+                        I could just send the certificate."</p>
+                    <div class="testimonial-person">
+                        <span class="avatar">VK</span>
+                        <div>
+                            <strong>Vikram K.</strong>
+                            <small>Data analyst, hired at a D2C brand</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"Partial credit for the right logic with a small syntax slip made
+                        the scoring feel fair, not just pass/fail."</p>
+                    <div class="testimonial-person">
+                        <span class="avatar">AR</span>
+                        <div>
+                            <strong>Anjali R.</strong>
+                            <small>Grad student</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+    <div class="container">
+
+        <div class="section-head">
+            <span class="eyebrow eyebrow-dark">// pricing.plans()</span>
+            <h2>Start free, upgrade for full certification</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="price-card">
+                    <h5>Starter</h5>
+                    <div class="price">₹0<span>/mo</span></div>
+                    <p>Try one assessment in any domain.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 1 assessment / month</li>
+                        <li><i class="fa-solid fa-check"></i> Basic score summary</li>
+                        <li><i class="fa-solid fa-check"></i> No certificate</li>
+                    </ul>
+                    <a href="/login" class="btn btn-outline-line w-100">Start free</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="price-card price-card-featured">
+                    <span class="price-tag">Most popular</span>
+                    <h5>Pro</h5>
+                    <div class="price">₹699<span>/mo</span></div>
+                    <p>For anyone building a verified skill portfolio.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Unlimited assessments</li>
+                        <li><i class="fa-solid fa-check"></i> Full sub-skill breakdown</li>
+                        <li><i class="fa-solid fa-check"></i> Verifiable certificates</li>
+                        <li><i class="fa-solid fa-check"></i> All 6 domains</li>
+                    </ul>
+                    <a href="/login" class="btn btn-solid w-100">Get Pro</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="price-card">
+                    <h5>Teams</h5>
+                    <div class="price">Custom</div>
+                    <p>For hiring pipelines and training cohorts.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+                        <li><i class="fa-solid fa-check"></i> Cohort dashboards</li>
+                        <li><i class="fa-solid fa-check"></i> Custom question sets</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline-line w-100">Talk to us</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section text-center">
+    <div class="container">
+        <span class="eyebrow">// start_now()</span>
+        <h2>Ready to turn your skills into a score?</h2>
+        <p>Your first assessment takes about 15 minutes.</p>
+        <a href="/login" class="btn btn-light btn-lg mt-3 px-5">Start Your Assessment Now</a>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact" class="footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <h4><span class="brand-mark">SELECT</span> AI Data Analyst</h4>
+                <p>A comprehensive platform designed to evaluate and validate data
+                    analytics skills through intelligent, AI-graded assessments.</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#domains">Domains</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Support</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <p><i class="fa-solid fa-envelope me-2"></i>
+                    <a href="mailto:info@aidataanalyst.com">info@aidataanalyst.com</a>
+                </p>
+                <p><i class="fa-solid fa-phone me-2"></i> +91 95326 96131</p>
+                <div class="mt-3 footer-social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row footer-bottom-row">
+            <div class="col-md-6">
+                <p class="footer-bottom mb-0">© 2026 AI Data Analyst Assessment. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="footer-bottom mb-0">
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
