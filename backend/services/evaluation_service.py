@@ -2,16 +2,24 @@ def evaluate_exam(questions, answers):
 
     total_questions = len(questions)
 
-    correct_answers = 0
+    if total_questions == 0:
+        return {
+            "score": 0,
+            "total_questions": 0,
+            "percentage": 0,
+            "grade": "N/A",
+            "feedback": "No questions were available for evaluation.",
+            "topic_scores": {}
+        }
 
+    correct_answers = 0
     topic_scores = {}
 
+    # Evaluate answers
     for index, question in enumerate(questions):
 
         selected_answer = answers.get(str(index))
-
         correct_answer = question.get("correct_answer")
-
         topic = question.get("topic", "General")
 
         if topic not in topic_scores:
@@ -26,11 +34,13 @@ def evaluate_exam(questions, answers):
             correct_answers += 1
             topic_scores[topic]["correct"] += 1
 
+    # Overall Percentage
     percentage = round(
         (correct_answers / total_questions) * 100,
         2
     )
 
+    # Grade Calculation
     if percentage >= 90:
         grade = "A+"
     elif percentage >= 80:
@@ -44,30 +54,63 @@ def evaluate_exam(questions, answers):
     else:
         grade = "F"
 
+    # Topic Analysis
     strong_topics = []
+    average_topics = []
     weak_topics = []
 
     for topic, score_data in topic_scores.items():
 
-        topic_percentage = (
-            score_data["correct"] /
-            score_data["total"]
-        ) * 100
+        topic_percentage = round(
+            (
+                score_data["correct"] /
+                score_data["total"]
+            ) * 100,
+            2
+        )
 
-        if topic_percentage >= 70:
+        topic_scores[topic]["percentage"] = topic_percentage
+
+        if topic_percentage >= 75:
             strong_topics.append(topic)
+
+        elif topic_percentage >= 50:
+            average_topics.append(topic)
+
         else:
             weak_topics.append(topic)
 
+    # Feedback Messages
+    strengths_message = (
+        ", ".join(strong_topics)
+        if strong_topics
+        else "No strong areas identified yet."
+    )
+
+    improvement_message = (
+        ", ".join(weak_topics)
+        if weak_topics
+        else "No major weak areas found."
+    )
+
+    if weak_topics:
+        recommended_topics = (
+            f"Focus more on: {', '.join(weak_topics)}."
+        )
+    else:
+        recommended_topics = (
+            "Keep practicing to maintain your excellent performance."
+        )
+
     feedback = f"""
 Strengths:
-{', '.join(strong_topics) if strong_topics else 'None'}
+{strengths_message}
 
 Areas for Improvement:
-{', '.join(weak_topics) if weak_topics else 'None'}
+{improvement_message}
 
 Recommended Learning Topics:
-Focus on weak areas and practice more MCQs.
+{recommended_topics}
 """
 
     return {
@@ -76,5 +119,8 @@ Focus on weak areas and practice more MCQs.
         "percentage": percentage,
         "grade": grade,
         "feedback": feedback,
-        "topic_scores": topic_scores
+        "topic_scores": topic_scores,
+        "strong_topics": strong_topics,
+        "average_topics": average_topics,
+        "weak_topics": weak_topics
     }
