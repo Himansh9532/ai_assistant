@@ -255,3 +255,4 @@ def login_candidate(
         "candidate_id": candidate.id,
         "full_name": candidate.full_name,
     }
+

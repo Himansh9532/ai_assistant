@@ -3,14 +3,15 @@ document.getElementById("registerForm")
 
     e.preventDefault();
 
-    const payload = {
-        full_name: document.getElementById("full_name").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        college_company: document.getElementById("college_company").value,
-        stream: document.getElementById("stream").value,
-        experience: document.getElementById("experience").value
-    };
+  const payload = {
+    full_name: document.getElementById("full_name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    college_company: document.getElementById("college_company").value,
+    stream: document.getElementById("stream").value,
+    experience: document.getElementById("experience").value,
+    password: document.getElementById("password").value   // 🔥 ADD THIS
+};
 
     try {
 
